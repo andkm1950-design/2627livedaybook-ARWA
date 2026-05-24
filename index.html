@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apple Residency WA Accounts FY2026-27</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--navy:#173b73;
+--navy2:#274c8a;
+--gold:#f2b632;
+--green:#27ae60;
+--red:#e74c3c;
+--light:#ffffff;
+--shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#eef2f7;
+color:#1d3557;
+}
+
+/* HEADER */
+
+.header{
+background:linear-gradient(135deg,var(--navy),var(--navy2));
+color:#fff;
+margin:20px;
+padding:22px;
+height:160px;
+text-align:center;
+border-radius:22px;
+box-shadow:var(--shadow);
+}
+
+.header h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.header p{
+font-size:19px;
+}
+
+.version{
+display:inline-block;
+margin-top:22px;
+padding:10px 28px;
+border-radius:30px;
+background:rgba(255,255,255,.18);
+font-weight:700;
+}
+
+/* LOGIN */
+
+.login-box{
+width:100%;
+max-width:380px;
+background:#3628f6;
+padding:24px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.22);
+margin:80px auto;
+text-align:center;
+}
+
+.logo{
+width:70px;
+height:70px;
+margin:auto;
+border-radius:50%;
+background:#f2b632;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:700;
+color:#000;
+margin-bottom:14px;
+}
+
+.login-box h2{
+font-size:26px;
+margin-bottom:20px;
+color:#adf909;
+line-height:1.4;
+}
+
+.login-box input{
+width:100%;
+padding:13px;
+margin-bottom:14px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:15px;
+}
+
+.login-box button{
+width:100%;
+padding:13px;
+background:#173b73;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+margin-bottom:12px;
+}
+
+.login-box button:hover{
+background:#15d500;
+}
+
+.cred-table{
+width:100%;
+border-collapse:collapse;
+font-size:13px;
+color:#d7ff59;
+}
+
+.cred-table th{
+background:#173b73;
+color:white;
+padding:8px;
+}
+
+.cred-table td{
+padding:8px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+padding:20px;
+}
+
+.nav-btn{
+background:var(--navy);
+color:white;
+padding:14px 22px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-weight:700;
+transition:.3s;
+}
+
+.nav-btn:hover{
+background:var(--gold);
+color:#000;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1300px;
+margin:auto;
+padding:20px;
+}
+
+/* SECTION */
+
+.section{
+display:none;
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:var(--shadow);
+margin-bottom:30px;
+}
+
+.section.active{
+display:block;
+}
+
+.section h2{
+margin-bottom:20px;
+color:var(--navy);
+}
+
+/* DASHBOARD */
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+}
+
+.card{
+background:#fff;
+padding:30px 20px;
+border-radius:18px;
+box-shadow:var(--shadow);
+text-align:center;
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#173b73;
+}
+
+.card p{
+font-size:16px;
+line-height:1.6;
+margin-bottom:20px;
+color:#555;
+}
+
+.card-link,
+.card-btn{
+display:inline-block;
+background:#173b73;
+color:white;
+padding:12px 24px;
+border:none;
+border-radius:12px;
+font-weight:700;
+font-size:15px;
+cursor:pointer;
+text-decoration:none;
+transition:.3s;
+}
+
+.card-link:hover,
+.card-btn:hover{
+background:#f2b632;
+color:#000;
+}
+
+/* FORM */
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-bottom:20px;
+}
+
+.form-grid input{
+padding:14px;
+border:1px solid #ccd5e0;
+border-radius:10px;
+}
+
+.add-btn{
+background:var(--green);
+color:white;
+padding:14px 24px;
+border:none;
+border-radius:10px;
+font-weight:700;
+cursor:pointer;
+}
+
+/* TABLE */
+
+.table-wrap{
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#173b73;
+color:white;
+padding:14px;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #ddd;
+vertical-align:top;
+}
+
+/* MC GRID */
+
+.mc-grid{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:10px;
+max-width:700px;
+}
+
+.mc-box{
+padding:14px;
+text-align:center;
+border-radius:12px;
+font-weight:700;
+color:white;
+}
+
+.paid{
+background:#27ae60;
+}
+
+/* SHEET */
+
+.sheet-wrap{
+width:100%;
+overflow:auto;
+background:white;
+padding:10px;
+border-radius:18px;
+box-shadow:var(--shadow);
+}
+
+.sheet-frame{
+width:1600px;
+height:900px;
+border:none;
+}
+
+/* LOGOUT */
+
+.logout{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#e74c3c;
+color:white;
+padding:14px 20px;
+border:none;
+border-radius:50px;
+font-weight:700;
+cursor:pointer;
+box-shadow:var(--shadow);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.dashboard-grid{
+grid-template-columns:1fr;
+}
+
+.header h1{
+font-size:28px;
+}
+
+.login-box{
+max-width:340px;
+}
+
+}
+#loginOverlay{
+position:fixed;
+inset:0;
+background:#eef2f7;
+z-index:9999;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+<h1>Welfare Association Live Day Book-2026_2027</h1>
+
+<p>
+Maintenance Collection • Expense Tracking • Cash & Bank Monitoring
+</p>
+
+<div class="version">
+Version V1.04
+</div>
+
+</div>
+
+<!-- LOGIN -->
+
+<div id="loginOverlay">
+
+<div class="login-box">
+
+<div class="logo">AR</div>
+
+<h2>
+Apple Residency WA<br>
+Accounts FY 2026-27
+</h2>
+
+<input type="text" id="user" placeholder="User ID">
+
+<input type="password" id="pass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<table class="cred-table">
+
+<tr>
+<th>Role</th>
+<th>User ID</th>
+<th>Password</th>
+</tr>
+
+<tr>
+<td>Admin</td>
+<td><code>admin</code></td>
+<td><code>arwa_accounts_2026-2027</code></td>
+</tr>
+
+<tr>
+<td>Viewer</td>
+<td><code>blank</code></td>
+<td><code>arwa2627</code></td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<button class="nav-btn"
+onclick="showSection('dashboard')">
+Dashboard
+</button>
+
+<button class="nav-btn"
+onclick="showSection('entry')">
+Add Entry
+</button>
+
+<button class="nav-btn"
+onclick="showSection('daybook')">
+Day Book Abstract
+</button>
+
+<button class="nav-btn"
+onclick="showSection('mc')">
+MC Status
+</button>
+
+<button class="nav-btn"
+onclick="showSection('sheet')">
+Monthly LIVE DAY_BOOK
+</button>
+
+</div>
+
+<div class="container">
+
+<!-- DASHBOARD -->
+
+<div id="dashboard" class="section active">
+
+<h2>Financial Dashboard</h2>
+
+<div class="dashboard-grid">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<h3>FY 2024-2025</h3>
+
+<p>Previous Financial Year Records</p>
+
+<a href="YOUR_2024_2025_VERCEL_LINK"
+target="_blank"
+class="card-link">
+Open Archive
+</a>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<h3>FY 2025-2026</h3>
+
+<p>Previous Financial Year Records</p>
+
+<a href="YOUR_2025_2026_VERCEL_LINK"
+target="_blank"
+class="card-link">
+Open Archive
+</a>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<h3>FY 2026-2027</h3>
+
+<p>Current Financial Year Dashboard</p>
+
+<button class="card-btn"
+onclick="showSection('dashboard')">
+Open Dashboard
+</button>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="card">
+
+<h3>Last Month Abstract</h3>
+
+<p>
+Opening Balance<br>
+Receipts<br>
+Payments<br>
+Closing Balance
+</p>
+
+<button class="card-btn"
+onclick="showSection('daybook')">
+View Abstract
+</button>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="card">
+
+<h3>Current Month DAY BOOK</h3>
+
+<p>Live Receipts & Payments</p>
+
+<button class="card-btn"
+onclick="showSection('sheet')">
+Open Day Book
+</button>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="card">
+
+<h3>Current Month MC Status</h3>
+
+<p>Maintenance Collection Status</p>
+
+<button class="card-btn"
+onclick="showSection('mc')">
+Open MC Status
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ENTRY -->
+
+<div id="entry" class="section">
+
+<h2>Add Day Book Abstract Entry</h2>
+
+<div class="form-grid">
+
+<input type="date" id="date">
+
+<input type="number" step="0.01" id="opening_cash" placeholder="Opening Cash">
+
+<input type="number" step="0.01" id="opening_bank" placeholder="Opening Bank">
+
+<input type="number" step="0.01" id="receipts_cash" placeholder="Receipts Cash">
+
+<input type="number" step="0.01" id="receipts_bank" placeholder="Receipts Bank">
+
+<input type="number" step="0.01" id="payments_cash" placeholder="Payments Cash">
+
+<input type="number" step="0.01" id="payments_bank" placeholder="Payments Bank">
+
+</div>
+
+<button class="add-btn"
+onclick="addEntry()">
+Add Entry
+</button>
+
+</div>
+
+<!-- DAYBOOK -->
+
+<div id="daybook" class="section">
+
+<h2>Monthly Day Book Abstract</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+<th>Opening Balance</th>
+<th>Receipts</th>
+<th>Total</th>
+<th>Payments</th>
+<th>Closing Balance</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="entryTable">
+
+<tr>
+<td colspan="7">No Entries Yet</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- MC STATUS -->
+
+<div id="mc" class="section">
+
+<h2>Maintenance Collection Status - Current Month</h2>
+
+<div class="mc-grid">
+
+<div class="mc-box paid">A5</div>
+<div class="mc-box paid">B5</div>
+<div class="mc-box paid">C5</div>
+<div class="mc-box paid">D5</div>
+<div class="mc-box paid">E5</div>
+<div class="mc-box paid">F5</div>
+<div class="mc-box paid">G5</div>
+
+<div class="mc-box paid">A4</div>
+<div class="mc-box paid">B4</div>
+<div class="mc-box paid">C4</div>
+<div class="mc-box paid">D4</div>
+<div class="mc-box paid">E4</div>
+<div class="mc-box paid">F4</div>
+<div class="mc-box paid">G4</div>
+
+<div class="mc-box paid">A3</div>
+<div class="mc-box paid">B3</div>
+<div class="mc-box paid">C3</div>
+<div class="mc-box paid">D3</div>
+<div class="mc-box paid">E3</div>
+<div class="mc-box paid">F3</div>
+<div class="mc-box paid">G3</div>
+
+<div class="mc-box paid">A2</div>
+<div class="mc-box paid">B2</div>
+<div class="mc-box paid">C2</div>
+<div class="mc-box paid">D2</div>
+<div class="mc-box paid">E2</div>
+<div class="mc-box paid">F2</div>
+<div class="mc-box paid">G2</div>
+
+<div class="mc-box paid">A1</div>
+<div class="mc-box paid">B1</div>
+<div class="mc-box paid"><C1/D1></div>
+<div class="mc-box paid">E1</div>
+<div class="mc-box paid">F1</div>
+<div class="mc-box paid">G1</div>
+
+</div>
+
+</div>
+
+<!-- GOOGLE SHEET -->
+
+<div id="sheet" class="section">
+
+<h2>Monthly LIVE DAY_BOOK - Receipts & Payments</h2>
+
+<div class="sheet-wrap">
+
+<iframe
+class="sheet-frame"
+src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTpD-l65PA8ay7iPN6STt1a_Q7c2CVVCjh6ZL2Kk7aWv4jLlT-lrpp3iFmN-xzP035CPqiuPUw-C8kQ/pubhtml"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+<button class="logout"
+onclick="logout()">
+Logout
+</button>
+
+<footer style="
+background:#3108e3;
+color:white;
+text-align:center;
+font-size:12px;
+padding:14px;
+border-radius:12px;
+margin:20px;
+">
+
+@copyrights_2026-27 Apple Residency Flat Owners Welfare Association
+<br>
+Azath Nagar 2nd Street, K.Sathanur,
+K.K.Nagar, Tiruchirapalli-620021 | V1.04
+
+</footer>
+
+
+<script>
+
+let role='viewer';
+
+/* LOAD SAVED DATA */
+
+let entries = JSON.parse(localStorage.getItem('arwa_entries')) || [];
+
+/* INITIAL TABLE LOAD */
+
+window.onload = function(){
+
+renderTable();
+
+};
+
+/* LOGIN */
+
+function login(){
+
+const u=document.getElementById('user').value.trim();
+const p=document.getElementById('pass').value.trim();
+
+if(u==='admin' && p==='arwa_accounts_2026-2027'){
+
+role='admin';
+
+document.getElementById('loginOverlay').style.display='none';
+
+alert('Welcome Treasurer');
+
+}
+
+else if(p==='arwa2627'){
+
+role='viewer';
+
+document.getElementById('loginOverlay').style.display='none';
+
+alert('Viewer Access');
+
+}
+
+else{
+
+alert('Wrong Credentials');
+
+}
+
+}
+
+/* LOGOUT */
+
+function logout(){
+
+location.reload();
+
+}
+
+/* SECTION OPEN */
+
+function showSection(id){
+
+if(role==='viewer' && id==='entry'){
+
+alert('Admin Access Only');
+
+id='dashboard';
+
+}
+
+const target=document.getElementById(id);
+
+if(!target){
+
+alert('Section Not Found');
+
+return;
+
+}
+
+document.querySelectorAll('.section').forEach(sec=>{
+
+sec.classList.remove('active');
+
+});
+
+target.classList.add('active');
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+}
+
+/* SAVE TO LOCAL STORAGE */
+
+function saveEntries(){
+
+localStorage.setItem(
+'arwa_entries',
+JSON.stringify(entries)
+);
+
+}
+
+/* ADD ENTRY */
+
+function addEntry(){
+
+if(role!=='admin'){
+
+alert('Only Admin Can Add Entries');
+
+return;
+
+}
+
+const date = document.getElementById('date').value;
+
+const opening_cash =
+Number(document.getElementById('opening_cash').value || 0);
+
+const opening_bank =
+Number(document.getElementById('opening_bank').value || 0);
+
+const receipts_cash =
+Number(document.getElementById('receipts_cash').value || 0);
+
+const receipts_bank =
+Number(document.getElementById('receipts_bank').value || 0);
+
+const payments_cash =
+Number(document.getElementById('payments_cash').value || 0);
+
+const payments_bank =
+Number(document.getElementById('payments_bank').value || 0);
+
+if(!date){
+
+alert('Select Date');
+
+return;
+
+}
+
+const total_cash = opening_cash + receipts_cash;
+
+const total_bank = opening_bank + receipts_bank;
+
+const closing_cash = total_cash - payments_cash;
+
+const closing_bank = total_bank - payments_bank;
+
+/* PUSH ENTRY */
+
+entries.push({
+
+date,
+
+opening_cash,
+opening_bank,
+
+receipts_cash,
+receipts_bank,
+
+total_cash,
+total_bank,
+
+payments_cash,
+payments_bank,
+
+closing_cash,
+closing_bank
+
+});
+
+/* SAVE */
+
+saveEntries();
+
+/* RENDER */
+
+renderTable();
+
+/* CLEAR FORM */
+
+document.getElementById('date').value='';
+
+document.getElementById('opening_cash').value='';
+
+document.getElementById('opening_bank').value='';
+
+document.getElementById('receipts_cash').value='';
+
+document.getElementById('receipts_bank').value='';
+
+document.getElementById('payments_cash').value='';
+
+document.getElementById('payments_bank').value='';
+
+alert('Entry Added Successfully');
+
+}
+
+/* RENDER TABLE */
+
+function renderTable(){
+
+const tb=document.getElementById('entryTable');
+
+if(entries.length===0){
+
+tb.innerHTML=`
+<tr>
+<td colspan="7">No Entries Yet</td>
+</tr>
+`;
+
+return;
+
+}
+
+let html='';
+
+entries.forEach((e,index)=>{
+
+html += `
+
+<tr>
+
+<td>
+${e.date}
+</td>
+
+<td>
+Cash : ₹${e.opening_cash.toFixed(2)}<br>
+Bank : ₹${e.opening_bank.toFixed(2)}
+</td>
+
+<td>
+Cash : ₹${e.receipts_cash.toFixed(2)}<br>
+Bank : ₹${e.receipts_bank.toFixed(2)}
+</td>
+
+<td>
+Cash : ₹${e.total_cash.toFixed(2)}<br>
+Bank : ₹${e.total_bank.toFixed(2)}
+</td>
+
+<td>
+Cash : ₹${e.payments_cash.toFixed(2)}<br>
+Bank : ₹${e.payments_bank.toFixed(2)}
+</td>
+
+<td>
+Cash : ₹${e.closing_cash.toFixed(2)}<br>
+Bank : ₹${e.closing_bank.toFixed(2)}
+</td>
+
+<td>
+
+${role === 'admin' ? `
+
+<button onclick="editEntry(${index})"
+style="
+background:#173b73;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+margin-bottom:5px;
+">
+Edit
+</button>
+
+<br>
+
+<button onclick="deleteEntry(${index})"
+style="
+background:#e74c3c;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+">
+Delete
+</button>
+
+` : `
+
+<span style="
+color:#666;
+font-weight:bold;
+">
+View Only
+</span>
+
+`}
+
+</td>
+
+
+</tr>
+
+`;
+
+});
+
+tb.innerHTML=html;
+
+}
+
+/* DELETE */
+
+function deleteEntry(index){
+
+if(confirm('Delete This Entry?')){
+
+entries.splice(index,1);
+
+saveEntries();
+
+renderTable();
+
+}
+
+}
+
+/* EDIT */
+
+function editEntry(index){
+
+const e=entries[index];
+
+document.getElementById('date').value=e.date;
+
+document.getElementById('opening_cash').value=e.opening_cash;
+
+document.getElementById('opening_bank').value=e.opening_bank;
+
+document.getElementById('receipts_cash').value=e.receipts_cash;
+
+document.getElementById('receipts_bank').value=e.receipts_bank;
+
+document.getElementById('payments_cash').value=e.payments_cash;
+
+document.getElementById('payments_bank').value=e.payments_bank;
+
+entries.splice(index,1);
+
+saveEntries();
+
+renderTable();
+
+}
+
+</script>
+
+</body>
+</html>
